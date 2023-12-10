@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+// import 'bootstrap/dist/css/bootstrap.min.css'; //bootstrap
+import Header from "./mainCom/Header";
+import Body from "./mainCom/Body";
+import Footer from "./mainCom/Footer";
+import { useEffect, useState } from 'react';
 import './App.css';
 
+//App
 function App() {
+  //fetch news
+  const [articles, setArticles] = useState([]);
+  const [category, setCategory] = useState('');
+  const [query, setQuery] = useState({search: false, input: null});
+
+  const apiKey = '745c4086cf374b7794159853dbd15648';
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        let url = null;
+        if (query.search) {
+          url = `https://newsapi.org/v2/top-headlines?q=${query.input}&apiKey=${apiKey}`;
+        } else {
+          url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`;
+        }
+        const response = await fetch(url);
+        const data = await response.json();
+        setArticles(data.articles);
+      } catch (error) {
+        console.error('There was an error', error);
+      }
+    };
+
+    fetchData();
+  }, [category, query.input]);
+
+  console.log('category', category) ///
+  console.log('articles', articles) ///
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header setCategory={setCategory} setQuery={setQuery}/>
+      <Body articles={articles} />
+      <Footer />
     </div>
   );
 }

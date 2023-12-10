@@ -1,0 +1,59 @@
+.Body{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.NewsIntro {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    margin-bottom: 10px;
+}
+
+.NewsIntro img {
+    width: 270px;
+    height: 170px;
+}
+
+.NewsIntro-ul-rating-like {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.NewsRating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NewsRating .like {
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+
+.NewsDetail,
+.NewsDetail img {
+    width: 600px;
+    margin-top: 10px;
+}
+
+.FavNews {
+    width: 600px;
+    margin-left: 40px;
+}
+/* small features */
+span:hover {
+    cursor: pointer;
+}
+
+.NewsIntro .title:hover,
+.FavNews-solo span:hover,
+.IntroRatingLike h3:hover{
+    color: grey;
+}

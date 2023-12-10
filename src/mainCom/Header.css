@@ -1,0 +1,26 @@
+.header h1 {
+    margin: 20px;
+    text-align: center;
+}
+
+.header span:hover,
+.header h1:hover {
+    color: gray;
+}
+.header .search-signup{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.header .searchTopics {
+    display: flex;
+    justify-content: space-around;
+}
+
+.searchTopics {
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    padding: 5px;
+}
