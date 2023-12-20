@@ -1,0 +1,54 @@
+/* OrderForm */
+.floating-box {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+    color: black;
+}
+
+.subscrible-title {
+    display: flex;
+    justify-content: left;
+    gap: 1.5rem;
+    margin-bottom: 20px;
+
+}
+
+.form {
+    padding: 20px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+}
+
+.floating-box .text-area{
+    height: 150px;
+}
+
+.floating-box .errorMsg {
+    color: red;
+}
+
+.form .btn{
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: aliceblue;
+}
+
+.form .btn:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.subscrible-title h1:hover{
+    color: aliceblue;
+}

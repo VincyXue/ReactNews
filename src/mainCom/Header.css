@@ -1,26 +1,36 @@
-.header h1 {
+.Header h1 {
     margin: 20px;
+    padding: 5px;
     text-align: center;
+    background-color: red;
+    width: 200px;
+    color:aliceblue;
 }
 
-.header span:hover,
-.header h1:hover {
-    color: gray;
-}
-.header .search-signup{
+.Header-h1-signup-search {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
-.header .searchTopics {
+.Header .search-signup{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.Header-Nabbar {
     display: flex;
     justify-content: space-around;
+    padding: 5px;
 }
 
-.searchTopics {
-    border-top: 1px black solid;
-    border-bottom: 1px black solid;
-    padding: 5px;
+.searchBar input {
+    background-color: aliceblue;
+}
+
+/* small features */
+.Header span:hover,
+.Header h1:hover{
+    color: gray;
 }

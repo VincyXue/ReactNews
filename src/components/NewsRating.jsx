@@ -19,10 +19,10 @@ export default function NewsRating({article, dispatch}) {
     return (
         <div className="NewsRating">
             <div className="like">
-                <span onClick={handleLikes}>❤️</span>
+                <span class="bi bi-heart" onClick={handleLikes}>❤️</span>
                 <p>Likes: {like} </p>
             </div>
-            <span className="fav" onClick={()=>{dispatch(addPost())}}> ➕</span>
+            <span className="fav" onClick={()=>{dispatch(addPost())}}>➕</span>
         </div>
     )
 }

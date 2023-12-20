@@ -1,4 +1,4 @@
-import IntroRatingLike from "./IntroRatingLike"
+import Intro from "./Intro"
 
 export default function FavNews ({favArticles, dispatch}) {
     const deletePost = (article) => {
@@ -15,7 +15,7 @@ export default function FavNews ({favArticles, dispatch}) {
             favArticles.map((article) => {
                 return (
                     <div>
-                        <IntroRatingLike article={article} dispatch={dispatch} />
+                        <Intro article={article} dispatch={dispatch} inFavNews={true}/>
                         <span className="deleteFav" onClick={()=>{dispatch(deletePost(article))}}>➖</span>
                     </div>)
             })

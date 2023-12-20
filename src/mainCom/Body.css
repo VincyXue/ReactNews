@@ -1,28 +1,38 @@
-.Body{
+.Body {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.Body-RegularNews {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: space-around;
 }
 
-.NewsIntro {
-    width: 600px;
-    display: flex;
-    align-items: center;
-    padding: 4px;
-    margin-bottom: 10px;
-}
-
-.NewsIntro img {
-    width: 270px;
-    height: 170px;
-}
-
-.NewsIntro-ul-rating-like {
-    margin-left: 10px;
+.BreakingNews {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 3px;
+    margin: 20px;
+}
+
+.NewsIntro-breakingNews img{
+    width: 1000px;
+}
+
+.NewsIntro-restNews{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px white solid;
+}
+
+.NewsIntro-restNews img {
+    width: 270px;
+    height: 170px;
 }
 
 .NewsRating{
@@ -37,15 +47,32 @@
     gap:5px;
 }
 
+.Intro{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .NewsDetail,
 .NewsDetail img {
     width: 600px;
     margin-top: 10px;
 }
 
+.NewsDetail{
+    margin-left: 50px;
+}
+.NewsDetail-full-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .FavNews {
-    width: 600px;
-    margin-left: 40px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 /* small features */
 span:hover {
@@ -54,6 +81,6 @@ span:hover {
 
 .NewsIntro .title:hover,
 .FavNews-solo span:hover,
-.IntroRatingLike h3:hover{
+.Intro h3:hover{
     color: grey;
 }

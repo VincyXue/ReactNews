@@ -1,15 +1,13 @@
-import NewsRating from "./NewsRating";
-import IntroRatingLike from "./IntroRatingLike";
+import Intro from "./Intro";
 
-export default function NewsIntro({article, dispatch}) {
-    const {urlToImage, title, author, publishedAt} = article;
+export default function NewsIntro({article, dispatch, breakingNews}) {
+    const {urlToImage, title} = article;
 
     return (
-        <div className='NewsIntro'>
+        <div className={breakingNews? 'NewsIntro-breakingNews':'NewsIntro-restNews'}>
             <img src={urlToImage} alt={title} />
-            <div className="NewsIntro-ul-rating-like">
-            <IntroRatingLike article={article} title={title} author={author} publishedAt={publishedAt} dispatch={dispatch}/>
-                <NewsRating dispatch={dispatch} article={article} />
+            <div>
+                <Intro article={article} dispatch={dispatch} inFavNews={false} />
             </div>
         </div>
     )

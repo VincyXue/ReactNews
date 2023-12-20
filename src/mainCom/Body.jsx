@@ -44,13 +44,16 @@ export default function Body({articles}) {
 
     return (
         <div className="Body">
-            <AllNews articles={articles} dispatch={dispatch} />
-            {state.showDetail ? (
-                    <NewsDetail articles={state.currentArticle} dispatch={dispatch}/>
-                ):(
-                <FavNews favArticles={state.favNewsArr} dispatch={dispatch} />
-                )
-            }
+            <AllNews articles={articles} dispatch={dispatch} breakingNews={true}/>
+            <div className='Body-RegularNews'>
+                <AllNews articles={articles} dispatch={dispatch} breakingNews={false}/>
+                {state.showDetail ? (
+                        <NewsDetail articles={state.currentArticle} dispatch={dispatch}/>
+                    ):(
+                    <FavNews favArticles={state.favNewsArr} dispatch={dispatch} />
+                    )
+                }
+            </div>
         </div>
     );
 }

@@ -1,4 +1,6 @@
-export default function IntroRatingLike({ article, dispatch}) {
+import NewsRating from "./NewsRating";
+
+export default function Intro({ article, dispatch, inFavNews}) {
     const { title, author, publishedAt } = article;
 
     const showDetail = () => {
@@ -9,10 +11,11 @@ export default function IntroRatingLike({ article, dispatch}) {
     }
 
     return (
-        <div className="IntroRatingLike">
+        <div className="Intro">
             <h3 className="title" onClick={()=>{dispatch(showDetail())}}>{title}</h3>
             <div className="author">{author} </div>
-            <div className="publish-at">{publishedAt} </div>
+            <div className="publish-at">{publishedAt}</div>
+            {inFavNews? <></>:<NewsRating dispatch={dispatch} article={article} />}
         </div>
     );
 }

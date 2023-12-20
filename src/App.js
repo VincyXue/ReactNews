@@ -12,7 +12,7 @@ function App() {
   const [category, setCategory] = useState('');
   const [query, setQuery] = useState({search: false, input: null});
 
-  const apiKey = '745c4086cf374b7794159853dbd15648';
+  const apiKey = process.env.REACT_APP_NEWS_API_KEY;
 
   useEffect(() => {
     const fetchData = async () => {
