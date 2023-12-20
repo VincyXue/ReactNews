@@ -11,7 +11,7 @@ Vincy News is a dynamic web application designed to keep users informed with the
 - **Minus Icon**: Removes the article from your favorites column. Closes the currently opened article.
 - **Expandable Articles**: Clicking on the article header will extend the article content for a detailed read.
 
-### Navbar - Vincy News
+### Navbar / Vincy News
 
 - **Hover Effect**: The color of the navbar changes upon hover.
 - **Topic Selection**: Clicking on different topics in the navbar dynamically updates the content of the web page.
